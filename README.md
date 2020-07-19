@@ -7,7 +7,19 @@ Obtain the latent variables that contain the maximal information wrt. sample (mu
 
 <div align="center">
 <p>Single </p>
-<img src="img/variable_perturbation.jpg" width="200"/>
+<img src="img/c_var0.jpg" width="200"/>
+</div>
+<div align="center">
+<p>Single </p>
+<img src="img/csemireconstructed.jpg" width="200"/>
+</div>
+<div align="center">
+<p>Single </p>
+<img src="img/zsemireconstructed.jpg" width="200"/>
+</div>
+<div align="center">
+<p>Single </p>
+<img src="img/reconstructed.jpg" width="200"/>
 </div>
 
 ## Details
