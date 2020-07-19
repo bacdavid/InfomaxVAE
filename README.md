@@ -1,5 +1,5 @@
 ##### Disclaimer
-This project is by David Bachmann (bacdavid). It is not published or affilated.
+This project is by David Bachmann (bacdavid). It is not published or affiliated.
 
 # InfomaxVAE
 
