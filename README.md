@@ -5,23 +5,23 @@ This project is by David Bachmann (bacdavid). It is not published or affilated.
 
 Obtain the latent variables that contain the maximal information wrt. sample (mutual information). This work is inspired by the InfoGAN (Chen et al., https://arxiv.org/abs/1606.03657) where the mutual information between selected channels and the sample is maximized. 
 
-<div align="center">
+<div align="center" style="text-align: center">
 <p>Perturbation of the single infomax-style latent variable. It can be observed that the lighting is addressed by this variable: In other words, the maximum information is contained in the knowledge about the lumination.</p>
 <img src="img/c_var0.jpg" width="80"/>
 </div>
-<div align="center">
+<div align="center" style="text-align: center">
 <p>All variables but the single infomax-style latent variable are masked for the reconstruction. This is most likely close to what a regular autoencoder with a single latent variable would produce.</p>
 <img src="img/csemireconstructed.jpg" width="80"/>
 </div>
-<div align="center">
+<div align="center" style="text-align: center">
 <p>The remining 99 vae-style latent variables result in a much better reconstruction than just the one infomax-style variable. However, the lumination is still better when including the single infomax-style varible which naturally is an important factor for the reconstruction.</p>
 <img src="img/zsemireconstructed.jpg" width="80"/>
 </div>
-<div align="center">
+<div align="center" style="text-align: center">
 <p>Reconstruction when including both types of latent variables.</p>
 <img src="img/reconstructed.jpg" width="80"/>
 </div>
-<div align="center">
+<div align="center" style="text-align: center">
 <p>Original samples.</p>
 <img src="img/original.jpg" width="80"/>
 </div>
