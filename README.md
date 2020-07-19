@@ -30,12 +30,12 @@ The original VAE-loss is
 ```
 mse(x, x_vae) + E[ KL(p(z | x) || p(z)).
 ```
-By adding the mutual information term, the following is obtained 
+By adding the mutual information term, the following is obtained:<br/> 
 *Please note that `[...;...]` denotes the concatenation operator*
 ```
-mse(x, x_vae) + E[ KL(p( [z;c] | x) || p( [z; c] )) - I(x; c) 
-= mse(x, x_vae) + E[ KL(p( [z;c] | x) || p( [z; c] )) - E[ KL(p( c | x) || p(c))
-= mse(x, x_vae) + E[ KL(p( z | x) || p( z )).
+mse(x, x_vae) + KL(p([z;c] | x) || p([z; c])) - I(x; c) 
+= mse(x, x_vae) + KL(p([z;c] | x) || p([z; c])) - KL(p(c | x) || p(c))
+= mse(x, x_vae) + KL(p(z | x) || p(z)).
 ```
 In other words, exclude the InfomaxVAE-style latent variables from the regularization term.
 
