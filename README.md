@@ -44,7 +44,7 @@ Obtain the latent variables that contain the maximal information wrt. sample (mu
 
 The original VAE-loss is 
 ```
-mse(x, x_vae) + E[ KL(p(z | x) || p(z)).
+mse(x, x_vae) + KL(p(z | x) || p(z)).
 ```
 By adding the mutual information term, the following is obtained:<br/> 
 *Please note that `[...;...]` denotes the concatenation operator*
