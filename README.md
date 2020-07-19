@@ -7,15 +7,15 @@ Obtain the latent variables that contain the maximal information wrt. sample (mu
 
 <div align="center">
 <img src="img/c_var0.jpg" width="80"/>
-<p align="justify">Fig. 1: Perturbation of the single infomax-style latent variable. It can be observed that the lighting is addressed by this variable: In other words, the maximum information is contained in the knowledge about the lumination.</p>
+<p align="justify">Fig. 1: Perturbation of the single InfomaxVAE-style latent variable. It can be observed that the lighting is addressed by this variable: In other words, the maximum information is contained in the knowledge about the lumination.</p>
 </div>
 <div align="center">
 <img src="img/csemireconstructed.jpg" width="80"/>
-<p align="justify">Fig. 2: All variables but the single infomax-style latent variable are masked for the reconstruction. This is most likely close to what a regular autoencoder with a single latent variable would produce.</p>
+<p align="justify">Fig. 2: All variables but the single InfomaxVAE-style latent variable are masked for the reconstruction. This is most likely close to what a regular autoencoder with a single latent variable would produce.</p>
 </div>
 <div align="center">
 <img src="img/zsemireconstructed.jpg" width="80"/>
-<p align="justify">Fig. 3: The remining 99 vae-style latent variables result in a much better reconstruction than just the one infomax-style variable. However, the lumination is still better when including the single infomax-style varible which naturally is an important factor for the reconstruction.</p>
+<p align="justify">Fig. 3: The remining 99 VAE-style latent variables result in a much better reconstruction than just the one InfomaxVAE-style variable. However, the lumination is still better when including the single Infomax-style variable, which naturally is an important factor for the reconstruction.</p>
 </div>
 <div align="center">
 <img src="img/reconstructed.jpg" width="80"/>
@@ -49,8 +49,8 @@ mse(x, x_vae) + E[ KL(p(z | x) || p(z)).
 By adding the mutual information term, the following is obtained:<br/> 
 *Please note that `[...;...]` denotes the concatenation operator*
 ```
-mse(x, x_vae) + KL(p([z;c] | x) || p([z; c])) - I(x; c) 
-= mse(x, x_vae) + KL(p([z;c] | x) || p([z; c])) - KL(p(c | x) || p(c))
+mse(x, x_vae) + KL(p([z;c] | x) || p([z;c])) - I(x; c) 
+= mse(x, x_vae) + KL(p([z;c] | x) || p([z;c])) - KL(p(c | x) || p(c))
 = mse(x, x_vae) + KL(p(z | x) || p(z)).
 ```
 In other words, exclude the InfomaxVAE-style latent variables from the regularization term.
